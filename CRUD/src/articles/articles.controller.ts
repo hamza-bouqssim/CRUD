@@ -31,7 +31,7 @@ export class ArticlesController {
   async findOne(@Param('id') id: string) {
     const specificArticle = await this.articlesService.findOne(+id);
     if(!specificArticle)
-      return new NotFoundException(`Articles with this id: ${id} not found`);
+      return new NotFoundException(`Articles with this id: ${id} Not found!`);
     return specificArticle;
   }
 

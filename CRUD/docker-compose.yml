@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: hamza123
+    ports:
+      - 5432:5432
+    volumes:
+      - DB:/var/lib/postgresql
+    
+volumes:
+  DB:
+    driver: local
+    driver_opts:
+      device: /Users/hbouqssi/Desktop/database/DB
+      type: none
+      o: bind
